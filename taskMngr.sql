@@ -1,5 +1,6 @@
-SQL for task manager:
+/**	SQL for task manager: **/
 
+create schema 'tmgr';
 
 create table
 tmgr.parent_task_tbl(
