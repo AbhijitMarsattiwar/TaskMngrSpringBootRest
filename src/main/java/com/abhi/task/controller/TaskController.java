@@ -17,7 +17,7 @@ import com.abhi.task.model.ParentTask;
 import com.abhi.task.model.Task;
 import com.abhi.task.service.TaskService;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api")
 public class TaskController {
@@ -25,11 +25,7 @@ public class TaskController {
 	@Autowired
 	private TaskService taskService;
 
-	@RequestMapping("/hi")
-	public String hi() {
-		return "Hello world! >>> Message from <a href='https://grokonez.com' target='_blank'>grokonez.com</a>";
-	}
-	
+		
 	@GetMapping("/parentTasks")
 	public List<ParentTask> getAllParents() {
 	    return taskService.getAllParents();

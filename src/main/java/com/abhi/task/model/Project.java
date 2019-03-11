@@ -13,31 +13,20 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="task_tbl")
-public class Task {
+@Table(name="project_tbl")
+public class Project {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="task_id")
-	private Integer taskId;
-	
-	//@Column(name="parent_id")
-	//public Integer parentId;
-	
-	@ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "parent_id", nullable = true)
-    private ParentTask parentTask;
-	
-	@ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "project_id", nullable = true)
-    private Project project;
+	@Column(name="project_id")
+	private Integer projectId;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = true)
     private User user;
-
-	@Column(name="task")
-	private String taskName;
+	
+	@Column(name="project_name")
+	private String projectName;
 	
 	@Column(name="start_date")
 	private Date startDate;
@@ -47,32 +36,21 @@ public class Task {
 		
 	@Column(name="priority")
 	private Integer priority;
-	
-	@Column(name="is_ended")
-	private Integer isEnded;
 
-	public Integer getTaskId() {
-		return taskId;
+	public Integer getProjectId() {
+		return projectId;
 	}
 
-	public void setTaskId(Integer taskId) {
-		this.taskId = taskId;
+	public void setProjectId(Integer projectId) {
+		this.projectId = projectId;
 	}
 
-	public ParentTask getParentTask() {
-		return parentTask;
+	public String getProjectName() {
+		return projectName;
 	}
 
-	public void setParentTask(ParentTask parentTask) {
-		this.parentTask = parentTask;
-	}
-
-	public String getTaskName() {
-		return taskName;
-	}
-
-	public void setTaskName(String taskName) {
-		this.taskName = taskName;
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
 	}
 
 	public Date getStartDate() {
@@ -99,28 +77,14 @@ public class Task {
 		this.priority = priority;
 	}
 
-	public Integer getIsEnded() {
-		return isEnded;
-	}
-
-	public void setIsEnded(Integer isEnded) {
-		this.isEnded = isEnded;
-	}
-
-	public Project getProject() {
-		return project;
-	}
-
-	public void setProject(Project project) {
-		this.project = project;
-	}
-
 	public User getUser() {
 		return user;
 	}
 
 	public void setUser(User user) {
 		this.user = user;
-	}	
+	}
+	
+		
 	
 }
