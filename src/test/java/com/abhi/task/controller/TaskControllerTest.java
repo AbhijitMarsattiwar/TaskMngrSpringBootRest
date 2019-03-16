@@ -40,7 +40,7 @@ public class TaskControllerTest {
     List<Task> taskList = new ArrayList<Task>();
     
     Task task = new Task();
-    String taskJson = "{\"taskId\":\"2\",\"parentTask\":{\"parentId\":\"1\",\"parentTask\":\"Parent Task 1\"},\"project\":{\"projectId\":\"1\",\"user\":{\"userId\":\"1\",\"firstName\":\"Abhijit\",\"lastName\":\"Marsattiwar\",\"empId\":\"am10001\"},\"projectName\":\"FMC4ME\",\"startDate\":\"2019-02-17T18:30:00.000+0000\",\"endDate\":\"2019-02-19T18:30:00.000+0000\",\"priority\":\"1\"},\"user\":{\"userId\":\"1\",\"firstName\":\"Abhijit\",\"lastName\":\"Marsattiwar\",\"empId\":\"am10001\"},\"taskName\":\"Build the code\",\"startDate\":\"2019-02-18T18:30:00.000+0000\",\"endDate\":\"2019-02-19T18:30:00.000+0000\",\"priority\":\"2\",\"isEnded\":\"0\"}";    
+    String taskJson = "{\"taskId\":\"2\",\"parentTask\":{\"parentId\":\"1\",\"parentTask\":\"Parent Task 1\"},\"project\":{\"projectId\":\"1\",\"user\":{\"userId\":\"1\",\"firstName\":\"Abhijit\",\"lastName\":\"Marsattiwar\",\"empId\":\"10001\"},\"projectName\":\"FMC4ME\",\"startDate\":\"2019-02-17T18:30:00.000+0000\",\"endDate\":\"2019-02-19T18:30:00.000+0000\",\"priority\":\"1\"},\"user\":{\"userId\":\"1\",\"firstName\":\"Abhijit\",\"lastName\":\"Marsattiwar\",\"empId\":\"10001\"},\"taskName\":\"Build the code\",\"startDate\":\"2019-02-18T18:30:00.000+0000\",\"endDate\":\"2019-02-19T18:30:00.000+0000\",\"priority\":\"2\",\"isEnded\":\"0\"}";    
     
         
 	@Test

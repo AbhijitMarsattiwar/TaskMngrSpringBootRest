@@ -44,8 +44,8 @@ public class ProjectControllerTest {
     List<Project> projectList = new ArrayList<Project>();
     User user1 = new User(123,"Amam","Sharma",1234);
     Project project = new Project();
-    String projectJson = "{\"projectId\":\"1\",\"user\":{\"userId\":\"1\",\"firstName\":\"Abhijit\",\"lastName\":\"Marsattiwar\",\"empId\":\"am10001\"},\"projectName\":\"FMC4ME\",\"startDate\":\"2019-02-17T18:30:00.000+0000\",\"endDate\":\"2019-02-19T18:30:00.000+0000\",\"priority\":\"1\"}";    
-    String userJson = "{\"userId\":\"3\",\"firstName\":\"Sameer\",\"lastName\":\"Tambe\",\"empId\":\"st10003\"}"; 
+    String projectJson = "{\"projectId\":\"1\",\"user\":{\"userId\":\"1\",\"firstName\":\"Abhijit\",\"lastName\":\"Marsattiwar\",\"empId\":\"10001\"},\"projectName\":\"FMC4ME\",\"startDate\":\"2019-02-17T18:30:00.000+0000\",\"endDate\":\"2019-02-19T18:30:00.000+0000\",\"priority\":\"1\"}";    
+    String userJson = "{\"userId\":\"3\",\"firstName\":\"Sameer\",\"lastName\":\"Tambe\",\"empId\":\"10003\"}"; 
     //"{\"name\":\"Spring\",\"description\":\"10 Steps\",\"steps\":[\"Learn Maven\",\"Import Project\",\"First Example\",\"Second Example\"]}";
     
         
