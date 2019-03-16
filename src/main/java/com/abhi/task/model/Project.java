@@ -36,7 +36,8 @@ public class Project {
 		
 	@Column(name="priority")
 	private Integer priority;
-
+	
+	
 	public Integer getProjectId() {
 		return projectId;
 	}

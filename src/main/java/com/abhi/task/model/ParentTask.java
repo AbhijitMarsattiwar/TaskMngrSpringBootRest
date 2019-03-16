@@ -2,6 +2,8 @@ package com.abhi.task.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -12,6 +14,7 @@ public class ParentTask {
 	
 	@Id
 	@Column(name="parent_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer parentId;
 
 	@Column(name="parent_task")

@@ -39,7 +39,7 @@ tmgr.user_tbl(
    user_id INT NOT NULL AUTO_INCREMENT,
    first_name VARCHAR(200) NOT NULL,   
    last_name VARCHAR(200) NOT NULL,   
-   employee_id VARCHAR(20) NOT NULL,    
+   employee_id INT NULL,    
    PRIMARY KEY ( user_id )
 );
 

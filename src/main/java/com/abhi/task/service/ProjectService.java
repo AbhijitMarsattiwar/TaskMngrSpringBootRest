@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.abhi.task.model.ParentTask;
 import com.abhi.task.model.Project;
 import com.abhi.task.model.Task;
+import com.abhi.task.model.User;
 import com.abhi.task.repo.ParentTaskRepository;
 import com.abhi.task.repo.ProjectRepository;
 import com.abhi.task.repo.TaskRepository;
@@ -24,7 +25,9 @@ public class ProjectService {
 	private UserRepository userRepo;
 	
 	public List<Project> getAllProjects() {
-		return projectRepo.findAll();
+		
+		List<Project> projectList = projectRepo.findAll();				
+		return projectList;
 	}
 		
 	public Project addProject(Project project) {

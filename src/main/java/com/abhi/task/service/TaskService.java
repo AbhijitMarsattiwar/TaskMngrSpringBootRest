@@ -24,12 +24,20 @@ public class TaskService {
 		return parentRepo.findAll();
 	}
 	
+	public List<Task> getAllTasksForProject(Integer projectId) {
+		return taskRepo.findAllTasksForProject(projectId);
+	}
+	
 	public List<Task> getAllTasks() {
 		return taskRepo.findAll();
 	}
 	
 	public Task addTask(Task task) {
 		return taskRepo.save(task);
+	}
+	
+	public ParentTask addTask(ParentTask task) {
+		return parentRepo.save(task);
 	}
 	
 	public Task updateOrCompleteTask(Task task) {
@@ -39,6 +47,11 @@ public class TaskService {
 	public Optional<Task> getTaskById(Integer taskId) {
 		 Optional<Task> task = taskRepo.findById(taskId);		 
 		 return task;
+	}
+	
+	public List<Task> getTaskCountForProject(Iterable<Integer> projectId) {
+		 List<Task> taskList = taskRepo.findAllById(projectId);		 
+		 return taskList;
 	}
 
 }

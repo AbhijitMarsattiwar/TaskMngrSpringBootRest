@@ -1,7 +1,9 @@
 package com.abhi.task.controller;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.IntStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -36,9 +38,20 @@ public class TaskController {
 	    return taskService.getAllTasks();
 	}
 	
+	@GetMapping("/tasks/projects/{projectId}")
+	public List<Task> getAllTasksForProject(@PathVariable(value = "projectId") Integer projId) {
+				
+	    return taskService.getAllTasksForProject(projId);
+	}
+	
 	@PostMapping("/addTask")
 	public Task addTask(@RequestBody Task task) {
 		return taskService.addTask(task);
+	}
+		
+	@PostMapping("/addParentTask")
+	public ParentTask addParentTask(@RequestBody ParentTask parentTask) {
+		return taskService.addTask(parentTask);
 	}
 	
 	@GetMapping("/tasks/{id}")

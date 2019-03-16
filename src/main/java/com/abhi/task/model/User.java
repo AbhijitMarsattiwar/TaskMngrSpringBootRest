@@ -23,13 +23,13 @@ public class User {
 	private String lastName;
 	
 	@Column(name="employee_id")
-	private String empId;
+	private Integer empId;
 	
 	public User() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(Integer userId,String firstName,String lastName,String empId) {
+	public User(Integer userId,String firstName,String lastName,Integer empId) {
 		this.userId = userId;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -60,12 +60,13 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public String getEmpId() {
+	public Integer getEmpId() {
 		return empId;
 	}
 
-	public void setEmpId(String empId) {
+	public void setEmpId(Integer empId) {
 		this.empId = empId;
-	}	
+	}
+
 	
 }

@@ -34,8 +34,8 @@ public class UserService {
 		 return user;
 	}
 	
-	public void deleteUser(User user) {
-		userRepo.delete(user);
+	public void deleteUser(Integer userId) {
+		userRepo.deleteById(userId);;
 	}
 
 	public UserRepository getUserRepo() {
